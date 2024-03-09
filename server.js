@@ -25,17 +25,16 @@ server.listen(PORT, () => console.log(`Listening on http://localhost:${PORT}`));
 
 // POST method to submit user data to from forms
 
-server.post("/submit", (request, response) => {
-  console.log("posted");
-  response.send("thanks for submitting");
+server.post('/submit', (request, response) => {
+  console.log('posted');
+  response.send('thanks for submitting');
 });
-
 
 // Request Body
 
 const bodyParser = express.urlencoded();
 
-server.post("/submit", bodyParser, (request, response) => {
+server.post('/submit', bodyParser, (request, response) => {
   console.log(request.body);
-  response.send("thanks for submitting");
+  response.send('thanks for submitting');
 });
